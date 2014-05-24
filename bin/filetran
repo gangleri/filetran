@@ -1,0 +1,20 @@
+var fs = require('fs');
+var path = require('path');
+var send = require('../lib/send');
+var recv = require('../lib/recv');
+var parseArgs = require('minimist');
+var argOpts = { alias:{h:'host', p:'port'}};
+
+var argv = parseArgs(process.argv.slice(2), argOpts);
+var cmd = argv._[0];
+var file = argv._[1];
+
+if(cmd === 'send') {
+  send(file, argv.host, argv.port);
+} else if (cmd === 'receive') {
+  recv(argv.port, file);
+} else {
+  fs.createReadStream(path.join(__dirname, '/usage.txt')).
+    pipe(process.stdout);
+}
+
