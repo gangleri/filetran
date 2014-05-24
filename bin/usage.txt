@@ -1,0 +1,5 @@
+usage:
+
+  filetran send -h HOST -p PORT FILE
+
+  filetran receive -p PORT FILE 
