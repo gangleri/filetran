@@ -1,19 +1,12 @@
 {
-<<<<<<< HEAD
   "name": "filetran",
   "version": "0.0.3",
   "description": "Simple file transfer tool I've found useful.",
   "bin": "./bin/filetran",
-=======
-. "name": "filetran",
-  "version": "0.0.1",
-  "description": "Simple file transfer tool I've found useful.",
   "repository": {
     "type": "git",
     "url": "git://github.com/gangleri/filetran.git"
   },
-  "bin": "bin/filetran",
->>>>>>> 61d644a5cd1a22b4de2cc96bccc2fdf9147a2b6b
   "scripts": {
     "test": "tape ./tests"
   },
