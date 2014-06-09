@@ -1,6 +1,6 @@
 {
   "name": "filetran",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple file transfer tool I've found useful.",
   "bin": "./bin/filetran",
   "repository": {
