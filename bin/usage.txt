@@ -1,5 +1,20 @@
 usage:
+  filetran <cmd> [opts] <file>
 
-  filetran send -h HOST -p PORT FILE
+  cmd:
+    send: send a file to another filetran process
+    receive: receive a file from another filetran process
 
-  filetran receive -p PORT FILE 
+  opts:
+    -p, --port: The port to connect to or to listen on.
+    -h, --host: The host to connect to.
+                The host option can be used on either send or receive, but not both at once.
+                If the host is not specified, it acts as a server (run this first).
+                If a host is specified, it acts as a client (run this second).
+
+  file:
+    The filename to read from or write to. (The filenames do not need to match.)
+
+examples:
+  filetran receive -p 3000 my-awesome-file.txt
+  filetran send -h localhost -p 3000 my-file.js
